@@ -1,1 +1,60 @@
+:root {
+    --main-rgb: 26 27 28
+    !important;
+    --main: rgba(var(--main-rgb) / 0.5) !important;
+}
+
+* {
+    scrollbar-color: hsl(from var(--main) h s calc(l * 6))  hsl(from var(--main) h s calc(l * 1.9) / 0%);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+a {
+    color: hsl(from var(--main) h calc(s * 12) calc(l * 8.5) / 100%);
+}
+
+#channeltree *{
+    color: hsl(from var(--main) h s calc(l * 10) / 100%) !important;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+#channelname-bar {
+    background-color: hsl(from var(--main) h s calc(l * 1.9) / 10%);
+    border-radius: 0 !important;
+}
+
+#profile_container, #emoji-box-container, #profile-role-menu{
+    background-color: hsl(from rgb(var(--main-rgb)) h s calc(l * 1.9));
+}
+#profile-qa {
+    background-color: hsl(from rgb(var(--main-rgb)) h s calc(l * 0.8) / 40%);
+}
+
+.ql-editor{
+    border: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.activeUserEntry {
+    border: 1px solid rgba(128, 128, 128, 0.2);
+}
 
